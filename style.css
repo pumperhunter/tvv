@@ -1,0 +1,600 @@
+:root {
+  --red: #ea061b;
+  --yellow: #fff200;
+  --green: #00a551;
+  --blue: #00aeef;
+  --magenta: #ba519f;
+  --purple: #2e3192;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#top {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: #222;
+}
+
+#tv-page {
+  clear: both;
+  width: 100%;
+  min-height: 100px;
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 50px;
+  clear: both;
+}
+
+#top .tv-wrap {
+  position: relative;
+  margin: 5% auto 30px auto;
+  width: max-content;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  #top .tv-wrap {
+    max-width: unset;
+    width: calc(100% + 50px);
+    margin-left: -25px;
+  }
+}
+
+#top .tv-wrap p {
+  margin: 0;
+}
+
+#top .tv-wrap>p~* {
+  position: absolute;
+}
+
+#top .tv-wrap p>img {
+  pointer-events: none;
+  user-select: none;
+  width: auto;
+  max-width: 100%;
+  max-height: 90vh;
+}
+
+#top .tv-wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 6%;
+  width: 50%;
+  height: 40%;
+  background-image: url('https://minutehour.media/wp-content/uploads/2022/08/tv-antenna.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  pointer-events: none;
+}
+
+#top .tv-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://minutehour.media/wp-content/uploads/2022/08/tv-box.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 11;
+}
+
+
+#top .tv-wrap ul {
+  width: 16.75%;
+  right: 5.3%;
+  bottom: 10.5%;
+  height: 52%;
+  z-index: 12;
+  padding: 0;
+  border-radius: 0.5vw;
+  list-style: none;
+  margin: 0;
+  position: absolute;
+}
+
+#top .tv-wrap ul li {
+  margin: 0;
+  padding: 0;
+  display: contents;
+}
+
+#top .tv-wrap ul li a {
+  position: absolute;
+  display: grid;
+  text-align: center;
+  align-content: center;
+  color: transparent;
+  user-select: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.6s ease;
+}
+
+#top .tv-wrap ul li:nth-of-type(1) a {
+  width: 70%;
+  height: 33.3%;
+  left: 15.2%;
+  top: 2%;
+  background-image: url('https://minutehour.media/wp-content/uploads/2022/08/tv-knob-a.png');
+  border-radius: 100%;
+}
+
+#top .tv-wrap ul li:nth-of-type(1) a:hover {
+  transform: rotate(260deg);
+}
+
+
+#top .tv-wrap ul li:nth-of-type(1) a.clicked {
+  transform: rotate(-160deg);
+}
+
+#top .tv-wrap ul li:nth-of-type(2) a {
+  width: 70%;
+  height: 33.3%;
+  left: 15%;
+  top: 41.75%;
+  background-image: url('https://minutehour.media/wp-content/uploads/2022/08/tv-knob-b.png');
+  border-radius: 100%;
+}
+
+#top .tv-wrap ul li:nth-of-type(2) a:hover {
+  transform: rotate(-300deg);
+}
+
+#top .tv-wrap ul li:nth-of-type(2) a.clicked {
+  transform: rotate(120deg);
+}
+
+#top .tv-wrap ul li:nth-of-type(3) a {
+  width: 92%;
+  height: 16.5%;
+  bottom: 2%;
+  left: 4%;
+  background-image: url('https://minutehour.media/wp-content/uploads/2022/08/tv-btn-guide.png');
+  border-radius: 0.65vw;
+  background-size: 100% 100%;
+  border: 0em solid black;
+  background-color: black;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+#top .tv-wrap ul li:nth-of-type(3) a:hover {
+  box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.5), 0 3px 0 black;
+  transform: translatey(-3px);
+}
+
+#top .tv-wrap ul li:nth-of-type(3) a:focus {
+  border: 3px solid black;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transform: translatey(0);
+}
+
+#top .tv-wrap ul li:nth-of-type(3) a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  mix-blend-mode: multiply;
+  box-shadow: 0 0 0 inset rgba(0, 0, 0, 0);
+  transition: all 0.4s ease;
+}
+
+#top .tv-wrap ul li:nth-of-type(3) a:hover::before {
+  box-shadow: 0 -0.6em 1em inset rgba(0, 0, 0, 0.35);
+  background: #eee;
+}
+
+
+#top .tv-wrap ul li:nth-of-type(3) a:focus::before {
+  box-shadow: 0 0.6em 1em inset rgba(0, 0, 0, 0.75);
+}
+
+#top .tv-wrap .avia-iframe-wrap {
+  z-index: 7;
+  top: 9%;
+  left: 7%;
+  width: 66.3%;
+  padding-bottom: 52% !important;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+#top .tv-wrap .avia-iframe-wrap iframe {
+  border: 1vw solid black;
+}
+
+#top .tv-wrap #animation-wrap {
+  position: absolute;
+  width: 72%;
+  height: 80%;
+  bottom: 13%;
+  left: 5%;
+  overflow: hidden;
+  background: white;
+}
+
+#top .tv-wrap #animation-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #efefef;
+  opacity: 0.5;
+  background-image: url('https://minutehour.media/wp-content/uploads/2022/05/bg-noise-min.jpg');
+  background-repeat: repeat;
+  background-size: 600px;
+  background-position: 400px;
+  -webkit-animation: fuzz 1s steps(6) infinite;
+  animation: fuzz 1s steps(6) infinite;
+  mix-blend-mode: difference;
+}
+
+@keyframes fuzz {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: -150px 150px;
+  }
+
+  100% {
+    background-position: 250px 250px;
+  }
+}
+
+#top .tv-wrap .animation-wrap {
+  position: absolute;
+  bottom: 1%;
+  left: unset;
+  right: 12%;
+  height: 95%;
+  z-index: 3;
+  width: max-content;
+  max-width: 100%;
+}
+
+#top .tv-wrap .animation-wrap>*:not(img) {
+  display: none;
+}
+
+#top .tv-wrap .animation-wrap img {
+  max-height: 90vh;
+  height: 100%;
+  object-position: center;
+  box-shadow: none;
+  background: transparent;
+  outline: none;
+  float: right;
+  min-height: unset;
+}
+
+@media only screen and (max-width: 767px) {
+  #top .tv-wrap .animation-wrap img {
+    max-height: 50vw;
+  }
+}
+
+#tv-page .tv-wrap>p::before {
+  content: "";
+  position: absolute;
+  top: 6%;
+  left: 6%;
+  width: 70%;
+  height: 80%;
+  background: #222;
+  box-shadow: 0 0 150px inset rgba(0, 0, 0, 0.6),
+    0 50px 50px inset rgba(0, 0, 0, 0.9);
+  z-index: 10;
+  transition: all 0.3s ease;
+  border-radius: 25%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+#tv-page.toggled .tv-wrap>p::before {
+  opacity: 1;
+  transition-delay: 1s;
+  pointer-events: all;
+}
+
+#tv-page.toggled #guide {
+  filter: saturate(0);
+}
+
+.tv-wrap #guide {
+  color: white;
+  z-index: 8;
+  font-size: 1.65vw;
+  line-height: 1.25em;
+  width: 72%;
+  height: 80%;
+  top: 9%;
+  left: 5%;
+  background: rgba(30, 30, 40, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  transform: scaley(0) scalex(0.5) translatey(70%);
+  border-radius: 100px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  font-family: 'Courier New', monospace;
+  position: absolute;
+}
+
+.tv-wrap #guide::-webkit-scrollbar {
+  display: none;
+}
+
+.tv-wrap #guide.visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: scaley(1) scalex(1) translatey(0);
+  border-radius: 10px;
+}
+
+#tv-page #guide>div {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  transform: translatex(-100%) scale(0.6);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 6%;
+}
+
+#tv-page #guide>#guide-2 {
+  transform: translatex(100%) scale(0.6);
+}
+
+#tv-page #guide>div.visible {
+  pointer-events: all;
+  opacity: 1;
+  height: auto;
+  transform: translatex(0) scale(0.95) !important;
+}
+
+.tv-wrap #guide blockquote {
+  font-size: inherit;
+  border: none;
+  width: 100%;
+  color: inherit;
+  padding: 0.5em;
+  margin: 0;
+  line-height: 1;
+}
+
+.tv-wrap #guide p,
+.tv-wrap #guide li {
+  font-family: inherit;
+}
+
+.tv-wrap #guide h3 {
+  font-size: 1.5em;
+}
+
+.tv-wrap #guide ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  list-style: none;
+  margin: 0;
+  padding: 1%;
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+.tv-wrap #guide li {
+  display: block;
+  margin: 0.5%;
+  padding: 0;
+  border-radius: 5px;
+  color: #555;
+  background: currentColor;
+  border: 2px outset currentColor;
+  border-top-width: 0;
+  border-left-width: 0;
+  position: relative;
+  text-shadow:
+    0 1px #666,
+    1px 0 #666,
+    0 -1px #666,
+    -1px 0 #666,
+    0 0 2px #666;
+  transition: all 0.3s ease;
+  flex-grow: 4;
+}
+
+.tv-wrap #guide li:nth-of-type(5n-4) {
+  color: var(--red);
+}
+
+.tv-wrap #guide li:nth-of-type(5n-3) {
+  color: var(--yellow);
+}
+
+.tv-wrap #guide li:nth-of-type(5n-2) {
+  color: var(--green);
+}
+
+.tv-wrap #guide li:nth-of-type(5n-1) {
+  color: var(--blue);
+}
+
+.tv-wrap #guide li:nth-of-type(5n) {
+  color: var(--magenta);
+}
+
+.button::before,
+.tv-wrap #guide li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 46%;
+  background: #999;
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.tv-wrap #guide li a {
+  padding: 0.25em 0.5em;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  float: left;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0;
+  letter-spacing: -0.05em;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.tv-wrap #guide a em {
+  font-size: 0.7em;
+  display: block;
+  line-height: 1.25em;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.tv-wrap #guide li:focus-within,
+.tv-wrap #guide li:hover {
+  box-shadow: 0 0 0 2px white;
+  filter: hue-rotate(-30deg);
+}
+
+@media only screen and (max-width: 650px) {
+  .tv-wrap #guide {
+    font-size: 16px;
+  }
+
+  .tv-wrap #guide li {
+    margin-bottom: 6px;
+  }
+}
+
+@media only screen and (min-width: 1310px) and (min-height: 800px) {
+  .tv-wrap #guide {
+    font-size: 22px;
+  }
+}
+
+#tv-page #animation-wrap {
+  transition: all 0.5s ease;
+  transition-delay: 0.5s;
+}
+
+#tv-page #animation-wrap::after {
+  content: "◆";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: white;
+  color: white;
+  z-index: 8;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  transition-delay: 1.2s;
+  pointer-events: none;
+  box-shadow: 0 0 50px inset rgba(0, 0, 0, 0.5);
+  text-align: center;
+  display: grid;
+  align-content: center;
+  overflow: hidden;
+  font-size: 1px;
+  text-shadow: 0 0 10px,
+    0 0 20px,
+    0 0 30px;
+}
+
+#tv-page.toggled #animation-wrap::after {
+  opacity: 1;
+  transition-delay: 0s;
+  height: 100%;
+  top: 0;
+  background: #000;
+  font-size: 8px;
+}
+
+#tv-page.toggled #animation-wrap {
+  opacity: 0;
+  transform: scaley(0);
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.title {
+  font-family: 'Courier New', monospace;
+  color: white;
+  text-align: center;
+}
+
+.title b {
+  color: var(--red);
+}
+
+.title p {
+  margin-bottom: 30px;
+}
+
+.button {
+  text-decoration: none;
+  background: var(--red);
+  color: white;
+  max-width: max-content;
+  margin: 20px auto;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  position: relative;
+}
+
+.button:hover {
+  background: var(--yellow);
+  color: #222;
+}
